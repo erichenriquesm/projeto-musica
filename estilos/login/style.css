@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background:url('../../imagens/pexels-mehmet-turgut-kirkgoz-4663025.jpg')
+    center center no-repeat fixed;
+    background-size: cover;
+}
+
+main{
+    max-width: 350px;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+main #titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    text-align: center;
+    color: white;
+}
+
+label{
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+input{
+    width: 90%;
+    padding: 10px;
+    display: block;
+    margin: 20px auto;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.432);
+}
+
+input::placeholder{
+    color: white;
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: .2s;
+    background-color: rgba(0, 0, 0, 0.432);
+    color: white;
+}
+
+button:hover{
+    background-color: black;
+}
+
+p{
+    text-align: right;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    transition: .2s;
+}
+
+a:hover{
+    color:black;
+}
