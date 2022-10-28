@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(15, 235, 15);
+}
+
+
+body, html{
+    height: 100vh;
+    width: 100vw;
+    background: black url('../../imagens/pexels-faruk-tokluoğlu-10063279.jpg') center center no-repeat fixed;
+    background-size: cover;
+}
+main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.459);
+    border-radius: 5px;
+}
+
+main h1{
+    text-align: center;
+}
+
+main #titulo{
+    height: 50px;
+    padding: 20px;
+}
+
+article{
+    padding: 10px;
+}
+
+p{
+    color: white;
+    text-align: justify;
+    line-height: 1.5em;
+    padding: 20px 0px;
+}
+
