@@ -40,10 +40,11 @@ input{
     width: 90%;
     padding: 10px;
     display: block;
-    margin: 20px auto;
+    margin: 15px auto;
     outline: none;
     border: none;
     background-color: rgba(0, 0, 0, 0.432) ;
+    color: white;
 }
 
 input::placeholder{
@@ -77,4 +78,16 @@ a{
 
 a:hover{
     color:black;
+}
+
+#error{
+    color: red;
+    text-align: center;
+    display:none;
+}
+
+#success{
+    text-align: center;
+    color: rgb(32, 219, 32);
+    display:none;
 }

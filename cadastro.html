@@ -13,22 +13,26 @@
             <h1>Cadastro</h1>
         </div>
 
-        <div id="form">
+        <fo id="form">
             <label for="nome">Nome</label>
             <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
             <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" placeholder="Digite seu E-mail">
+            <input required type="email" name="email" id="email" placeholder="Digite seu E-mail">
             <label for="senha">Senha</label>
             <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
             <label for="confirmSenha">Confirme senha</label>
             <input type="password" name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha">
-            <button>Cadastrar</button>
-        </div>
+            <button type="button" onclick="cadastrar()">Cadastrar</button>
+            <p id="error">Preencha os dados corretamente</p>
+            <p id="success">Sucesso ao se cadastrar</p>
+            
+    </form>
 
         <div id="cab">
             <p><a href="login.html">Já tem uma conta?</a></p>
         </div>
     </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="cadastro.js"></script>
 </body>
 </html>
