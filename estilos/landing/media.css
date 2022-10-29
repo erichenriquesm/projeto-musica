@@ -1,5 +1,19 @@
-@media (min-width: 910px){
-    main{
-        width: 900px;
+@media (max-width: 450px){
+    h1{
+        font-size: 1.5em;
+    }
+
+    a{
+        font-size: .8em;
+    }
+
+    .icons{
+        grid-template-columns: 1fr;
+    }
+    footer{ 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
     }
 }
