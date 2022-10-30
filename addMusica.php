@@ -7,5 +7,4 @@ $autor = $data['autor'];
 $estilo = $data['estilos'];
 $dados = "INSERT INTO musicas VALUES(null, '$nome_musica', '$duracao', '$autor', '$estilo')";
 $query = mysqli_query($database, $dados);
-header('location:http://localhost/projeto-musica/plataforma.php');
 ?>

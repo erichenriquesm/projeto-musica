@@ -15,7 +15,9 @@ function addMusica(){
 
         axios.post('http://localhost/projeto-musica/addMusica.php', dadosMusica)
             .then(response =>{
-                console.log(response);
+                if(response){
+                    location.reload()
+                }
             })
 
             .catch(error => {
