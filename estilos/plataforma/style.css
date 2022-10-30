@@ -86,8 +86,8 @@ li{
 }
 
 .box{
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     background-color: lightgray;
     margin: 5px;
     position: relative;
@@ -125,4 +125,30 @@ button{
 .modal-body,
 .modal-footer{
     border: none !important;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid gray;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    color: white;
+    padding: 10px;
+}
+
+p{
+    color: white;
+    text-align: left;
+    margin-right: 5px;
+}
+
+#error{
+    display: none;
+    color: red;
+}
+
+#success{
+    display: none;
+    color: rgb(57, 224, 57);
 }

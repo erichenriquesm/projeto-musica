@@ -1,3 +1,9 @@
+<?php
+include 'conexao.php';
+$dados = 'SELECT * FROM musicas';
+$query = mysqli_query($database, $dados);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -68,15 +74,20 @@
                         </button>
                     </div>
                     <div id="container-music">
+                        <?php
+                            while($get = mysqli_fetch_array($query)){
+
+                        ?>
                         <div class="box">
-                            <abbr title="">
+                            <abbr title="Autor: <?php echo $get['autor']?> estilos: <?php echo $get['estilo']?>">
                                 <img src="imagens/—Pngtree—music icon design vector_4995201.png" alt="icon">
                                 <div class="duracao">
-                                    <p>aaaaa</p>
-                                    <p>00:00-00:00</p>
+                                    <p><?php echo $get['nome_musica']?></p>
+                                    <p>00:00-<?php echo $get['duracao']?></p>
                                 </div>
                             </abbr>
                         </div>
+                        <?php }?>
                     </div>
                 </div>
                 <!-- Modal -->
@@ -93,19 +104,29 @@
                                 <h1 class="modal-title fs-5" id="exampleModalLabel">Adicionar Música</h1>
                             </div>
                             <div class="modal-body">
-                                <input type="text" placeholder="Digite o nome da música">
-                                <input type="text" placeholder="Digite a duração da música 00:00">
-                                <input type="text" placeholder="Digite o nome do autor">
-                                <input type="text" placeholder="Digite os estilos da música">
+                                <form>
+                                    <input type="text" name="nomeMusica"  id="nomeMusica" placeholder="Digite o nome da música">
+                                    <input type="text" name="duracao" id="duracao" placeholder="Digite a duração da música 00:00">
+                                    <input type="text" name="autor" id="autor" placeholder="Digite o nome do autor">
+                                    <input type="text" name="estilos" id="estilos" placeholder="Digite os estilos da música">
+                                
                             </div>
-                            <div class="modal-footer">
-                                <button onclick="addMusica()" style="width: 100px;" type="button" class="btn btn-primary">Criar</button>
+                            <div style="justify-content: space-between;" class="modal-footer">
+                                <div class="d-flex">
+                                    <p id="error">Preencha os dados corretamente</p>
+                                    <p id="success">Sucesso ao se cadastrar</p>
+                                </div>
+                                <button  data-bs-dismiss="modal" aria-label="Close" type="reset" onclick="addMusica()" style="width: 100px;" type="button" class="btn btn-primary">Criar</button>
                             </div>
+                        </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+        <script src="adicionarMusica.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     </body>
 </html>
