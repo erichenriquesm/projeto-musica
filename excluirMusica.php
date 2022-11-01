@@ -1,7 +1,7 @@
 <?php
 include 'conexao.php';
 $id = $_POST['id'];
-$dados = "DELETE FROM users WHERE id = '$id'";
+$dados = "DELETE FROM musicas WHERE id = '$id'";
 $excluir = mysqli_query($database, $dados);
-header('location: dev.php');
+header('location: plataforma.php');
 ?>

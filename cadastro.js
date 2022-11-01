@@ -14,7 +14,7 @@ function cadastrar(){
 
         axios.post('http://localhost/projeto-musica/cadastro.php', dadosUser)
             .then(response =>{
-                console.log(response);
+                 location.href = 'plataforma.php';
             })
 
             .catch(error => {

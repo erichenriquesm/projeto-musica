@@ -18,7 +18,7 @@
             <input type="email" name="email" id="email" placeholder="Digite seu E-mail">
             <label for="senha">Senha</label>
             <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
-            <button>Logar</button>
+            <button onclick="logar()">Logar</button>
         </div>
 
         <div id="cab">
@@ -26,5 +26,14 @@
         </div>
     </main>
 
+    <script>
+        function logar(){
+            var email = document.querySelector('#email').value;
+            var senha = document.querySelector('#senha').value;
+            if(email === 'eric@gmail.com' && senha === '123456'){
+                location.href = 'plataforma.php';
+            }
+        }
+    </script>
 </body>
 </html>

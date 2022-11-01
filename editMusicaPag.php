@@ -66,45 +66,36 @@ $query = mysqli_query($database, $dados);
                     <div id="thumb">
                         <img src="imagens/pexels-anton-h-145707.jpg" alt="banner">
                     </div>
-                    <div style="display: flex;
-                    gap: 10px; margin: 10px 0;">
-                        <h1>Músicas</h1>
-                        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <i class="fa-solid fa-plus"></i> Adicionar música
-                        </button>
-
-                        <button class="btn btn-dark">
-                            <i class="fa-solid fa-plus"></i> <a href="editMusicaPag.php">Editar Música</a></i>
-                        </button>
-                    </div>
-                    <div id="container-music">
-                        <?php
-                            while($get = mysqli_fetch_array($query)){
-
-                        ?>
-                        <div class="box">
-                            <div id="opções">
-
-                            <div style="width: 30px; height: 30px; position: absolute; top: 0; right: 0;">
-                                <form action="excluirMusica.php" method="post">
-                                    <input type="hidden" name="id" value="<?php echo $get['id']?>">
-                                    <button type="submit" class="btn">
-                                        <i style="color:white;" class="fa-solid fa-trash"></i>
-                                    </button>
-                                </form>
-                            </div>
-
-                            </div>
-                            <abbr title="Autor: <?php echo $get['autor']?> estilos: <?php echo $get['estilo']?>">
-                                <img src="imagens/—Pngtree—music icon design vector_4995201.png" alt="icon">
-                                <div class="duracao">
-                                    <p><?php echo $get['nome_musica']?></p>
-                                    <p>00:00-<?php echo $get['duracao']?></p>
-                                </div>
-                            </abbr>
-                        </div>
-                        <?php }?>
-                    </div>
+                    <div class="container mt-2 overflow-auto">
+        <table class="table">
+            <thead class="table-dark">
+              <tr>
+                <th>Nome</th>
+                <th>Duração</th>
+                <th>Autor</th>
+                <th>Estilos</th>
+                <th>Editar</th>
+              </tr>
+            </thead>
+            <tbody>
+                <?php
+                while ($get = mysqli_fetch_array($query)) {
+                      ?>
+              <form action="editMusica.php" method="post">
+                <tr>
+                    <input type="hidden" name="id" value="<?php echo $get['id']?>">
+                      <td><input type="text" name="nome_musica" id="nome_muduracao" value="<?php echo $get['nome_musica'] ?>"></td>
+                      <td><input type="text" name="duracao" id="duracao" value="<?php echo $get['duracao']?>"></td>
+                      <td><input type="text" name="autor" id="autor" value="<?php echo $get['autor']?>"></td>
+                      <td><input type="text" name="estilo" id="estilo" value="<?php echo $get['estilo'] ?>"></td>
+                      <td class="crud">
+                          <button type="submit" class="btn btn-primary">Editar<i class="fa-regular fa-pen-to-square"></i></button>
+                      </td>
+                </tr>
+              </form>
+              <?php }?>
+            </tbody>
+          </table>
                 </div>
                 <!-- Modal -->
                 <div
