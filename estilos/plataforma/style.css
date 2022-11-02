@@ -103,19 +103,6 @@ img{
     object-fit: cover;
 }
 
-.duracao{
-    height: 50px;
-    padding: 5px;
-    width: 100%;
-    background-color: rgb(78, 216, 78);
-    color: white;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.363);
-    position: absolute;
-    bottom: 0px;
-    display: flex;
-    justify-content: space-between;
-}
-
 button{
     padding: 5px !important;
 }
@@ -184,6 +171,10 @@ p{
     a{
         font-size: .8em;
     }
+
+    button{
+        font-size: .8em;
+    }
 }   
 
 @media (max-width: 645px){
@@ -192,7 +183,13 @@ p{
         gap: 5px;
     }
 
-    #nav{
+    .row{
+        display: grid !important;
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+
+    #menu{
         display: none;
     }
 }   

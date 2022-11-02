@@ -28,7 +28,7 @@ $query = mysqli_query($database, $dados);
         <title>Home</title>
     </head>
     <body>
-        <header class="bg-dark">
+        <header style="position: sticky; width: 100%; top: 0;" class="bg-dark">
             <menu>
                 <h1>
                     <a id="title" href="landing.html">
@@ -44,7 +44,7 @@ $query = mysqli_query($database, $dados);
         </header>
         <div style="height: 84.5vh; margin-top: 1px;" class="container-xxl">
             <div class="row justify-content-md-center">
-                <div style="margin-left: -13px;" class="col-2 bg-dark">
+                <div id="menu" style="margin-left: -13px;" class="col-2 bg-dark">
                     <div id="nav">
                         <h4>Principal</h4>
                         <ul>
