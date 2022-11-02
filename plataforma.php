@@ -95,13 +95,8 @@ $query = mysqli_query($database, $dados);
                             </div>
 
                             </div>
-                            <abbr title="Autor: <?php echo $get['autor']?> estilos: <?php echo $get['estilo']?>">
-                                <img src="imagens/—Pngtree—music icon design vector_4995201.png" alt="icon">
-                                <div class="duracao">
-                                    <p><?php echo $get['nome_musica']?></p>
-                                    <p>00:00-<?php echo $get['duracao']?></p>
-                                </div>
-                            </abbr>
+                                <iframe width="100%" height="100%" src="<?php echo $get['linkYT']?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                
                         </div>
                         <?php }?>
                     </div>
@@ -122,10 +117,8 @@ $query = mysqli_query($database, $dados);
                             <div class="modal-body">
                                 <form>
                                     <input type="text" name="nomeMusica"  id="nomeMusica" placeholder="Digite o nome da música">
-                                    <input type="text" name="duracao" id="duracao" placeholder="Digite a duração da música 00:00">
+                                    <input type="text" name="linkYT" id="linkYT" placeholder="Digite a URL da música do youtube">
                                     <input type="text" name="autor" id="autor" placeholder="Digite o nome do autor">
-                                    <input type="text" name="estilos" id="estilos" placeholder="Digite os estilos da música">
-                                
                             </div>
                             <div style="justify-content: space-between;" class="modal-footer">
                                 <div class="d-flex">

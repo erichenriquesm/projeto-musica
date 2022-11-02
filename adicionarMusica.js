@@ -1,16 +1,14 @@
 function addMusica(){
     var nomeMusica = document.querySelector('#nomeMusica').value;
-    var duracao = document.querySelector('#duracao').value;
     var autor = document.querySelector('#autor').value;
-    var estilos = document.querySelector('#estilos').value;
-    if((nomeMusica.length != 0 && duracao.length != 0 && autor.length != 0 && estilos.length !=0)){
+    var linkYT = document.querySelector('#linkYT').value;
+    if((nomeMusica.length != 0 && linkYT.length != 0 && autor.length != 0)){
         document.querySelector('#error').style.display = 'none';
         document.querySelector('#success').style.display = 'block';
         var dadosMusica = {
             nome_musica:nomeMusica,
-            duracao:duracao,
             autor:autor,
-            estilos:estilos
+            linkYT:linkYT
         }
 
         axios.post('http://localhost/projeto-musica/addMusica.php', dadosMusica)

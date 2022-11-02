@@ -29,7 +29,7 @@ $puxar_dados = mysqli_query($database, $dados);
     <nav class="navbar navbar-dark bg-dark p-2">
         <h1 class="text-white p-2">Lista de Usuários</h1>
 
-        <button type="button" class="btn"><a href="landing.html">Home</a></button>
+        <button type="button" class="btn"><a href="plataforma.php">Home</a></button>
     </nav>
 
     <div class="container mt-2 overflow-auto">

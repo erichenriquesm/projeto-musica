@@ -163,6 +163,8 @@ p{
     color: rgb(57, 224, 57);
 }
 
+
+
 @media (max-width:1305px){
     #container-music{
         grid-template-columns: 1fr 1fr 1fr;

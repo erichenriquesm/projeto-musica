@@ -71,9 +71,8 @@ $query = mysqli_query($database, $dados);
             <thead class="table-dark">
               <tr>
                 <th>Nome</th>
-                <th>Duração</th>
+                <th>Link do Youtube</th>
                 <th>Autor</th>
-                <th>Estilos</th>
                 <th>Editar</th>
               </tr>
             </thead>
@@ -84,10 +83,10 @@ $query = mysqli_query($database, $dados);
               <form action="editMusica.php" method="post">
                 <tr>
                     <input type="hidden" name="id" value="<?php echo $get['id']?>">
-                      <td><input type="text" name="nome_musica" id="nome_muduracao" value="<?php echo $get['nome_musica'] ?>"></td>
-                      <td><input type="text" name="duracao" id="duracao" value="<?php echo $get['duracao']?>"></td>
+                      <td><input type="text" name="nome_musica" id="nome_musica" value="<?php echo $get['nome_musica'] ?>"></td>
+                      <td><input type="text" name="linkYT" id="linkYT" value="<?php echo $get['linkYT'] ?>"></td>
                       <td><input type="text" name="autor" id="autor" value="<?php echo $get['autor']?>"></td>
-                      <td><input type="text" name="estilo" id="estilo" value="<?php echo $get['estilo'] ?>"></td>
+
                       <td class="crud">
                           <button type="submit" class="btn btn-primary">Editar<i class="fa-regular fa-pen-to-square"></i></button>
                       </td>

@@ -2,9 +2,8 @@
 include 'conexao.php';
 $data = json_decode(file_get_contents('php://input'), true);
 $nome_musica = $data['nome_musica'];
-$duracao = $data['duracao'];
+$linkYT = $data['linkYT'];
 $autor = $data['autor'];
-$estilo = $data['estilos'];
-$dados = "INSERT INTO musicas VALUES(null, '$nome_musica', '$duracao', '$autor', '$estilo')";
+$dados = "INSERT INTO musicas VALUES(null, '$nome_musica', '$linkYT', '$autor')";
 $query = mysqli_query($database, $dados);
 ?>
