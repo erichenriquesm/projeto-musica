@@ -74,7 +74,7 @@ $query = mysqli_query($database, $dados);
                         </button>
 
                         <button class="btn btn-dark">
-                            <i class="fa-solid fa-plus"></i> <a href="editMusicaPag.php">Editar Música</a></i>
+                         <a href="editMusicaPag.php"><i class="fa-regular fa-pen-to-square"></i> Editar Música</a></i>
                         </button>
                     </div>
                     <div id="container-music">
