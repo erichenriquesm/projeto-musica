@@ -5,10 +5,12 @@ function addMusica(){
     if((nomeMusica.length != 0 && linkYT.length != 0 && autor.length != 0)){
         document.querySelector('#error').style.display = 'none';
         document.querySelector('#success').style.display = 'block';
+        var express = /(.*?)(^|\/|v=)([a-z0-9_-]{11})(.*)?/gi;
+        var id = express.exec(linkYT);
         var dadosMusica = {
             nome_musica:nomeMusica,
             autor:autor,
-            linkYT:linkYT
+            linkYT:id[3]
         }
 
         axios.post('http://localhost/projeto-musica/addMusica.php', dadosMusica)
