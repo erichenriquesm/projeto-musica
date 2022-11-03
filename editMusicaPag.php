@@ -31,7 +31,7 @@ $query = mysqli_query($database, $dados);
         <header class="bg-dark">
             <menu>
                 <h1>
-                    <a id="title" href="landing.html">
+                    <a id="title" href="plataforma.php">
                         Breezerly
                     </ai>
                 </h1>
@@ -44,7 +44,7 @@ $query = mysqli_query($database, $dados);
         </header>
         <div style="height: 84.5vh; margin-top: 1px;" class="container-xxl">
             <div class="row justify-content-md-center">
-                <div style="margin-left: -13px;" class="col-2 bg-dark">
+                <div id="menu" style="margin-left: -13px;" class="col-2 bg-dark">
                     <div id="nav">
                         <h4>Principal</h4>
                         <ul>

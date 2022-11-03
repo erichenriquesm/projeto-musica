@@ -7,6 +7,4 @@ $password = $data['senha'];
 $senha = password_hash($password, PASSWORD_DEFAULT);
 $dados = "INSERT INTO users VALUES(null, '$nome', '$email', '$senha')";
 $query = mysqli_query($database,$dados);
-
-
 ?>
